@@ -180,10 +180,8 @@ class ViewController: UIViewController, MGLMapViewDelegate, NavigationViewContro
         
         // Table view (Drawer)
         style.headerBackgroundColor = #colorLiteral(red: 0.2974345386, green: 0.4338284135, blue: 0.9865127206, alpha: 1)
-        style.cellTitleLabelTextColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        style.cellSubtitleLabelTextColor = #colorLiteral(red: 0.9626983484, green: 0.9626983484, blue: 0.9626983484, alpha: 1)
-        style.cellTitleLabelFont = UIFont.preferredFont(forTextStyle: .headline)
-        style.cellSubtitleLabelFont = UIFont.preferredFont(forTextStyle: .footnote)
+        style.cellTitleLabelTextColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        style.cellSubtitleLabelTextColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         
         return style
     }
