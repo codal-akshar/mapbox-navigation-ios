@@ -159,7 +159,26 @@ class ViewController: UIViewController, MGLMapViewDelegate, NavigationViewContro
         camera.altitude = 1_000
         navigationViewController.pendingCamera = camera
         
+        addSearchItem(viewController: navigationViewController)
+        
         present(navigationViewController, animated: true, completion: nil)
+    }
+    
+    func addSearchItem(viewController: NavigationViewController) {
+        var sections = viewController.tableViewSections
+        
+        let searchItem = TableViewItem("Search along route")
+        
+        searchItem.didSelectHandler = {
+            let alert = UIAlertController(title: "", message: "Unimplemented", preferredStyle: .actionSheet)
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
+                alert.dismiss(animated: true, completion: nil)
+            }))
+            viewController.present(alert, animated: true, completion: nil)
+        }
+        
+        sections.append([searchItem])
+        viewController.tableViewSections = sections
     }
     
     func styleForRegular() -> Style {
