@@ -168,7 +168,7 @@ class ViewController: UIViewController, MGLMapViewDelegate, NavigationViewContro
         var sections = viewController.tableViewSections
         
         let searchItem = TableViewItem("Search along route")
-        
+        searchItem.image = #imageLiteral(resourceName: "search")
         searchItem.didSelectHandler = {
             let alert = UIAlertController(title: "", message: "Unimplemented", preferredStyle: .actionSheet)
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
